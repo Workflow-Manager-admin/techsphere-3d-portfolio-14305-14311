@@ -1,0 +1,4 @@
+{
+    "command": "npm install && npx tsc --noEmit && npm test -- --ci",
+    "working_directory": "/home/kavia/workspace/code-generation/techsphere-3d-portfolio-14305-14311/techsphere_3d_portfolio"
+}

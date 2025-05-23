@@ -1,0 +1,4 @@
+{
+    "command": "PORT=<port> BROWSER=none npm start",
+    "working_directory": "/home/kavia/workspace/code-generation/techsphere-3d-portfolio-14305-14311/techsphere_3d_portfolio"
+}
