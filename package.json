@@ -1,0 +1,18 @@
+{
+  "name": "techsphere-3d-portfolio-14305-14311",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Root package for TechSphere 3D Portfolio project",
+  "scripts": {
+    "start": "cd techsphere_3d_portfolio && npm start",
+    "build": "cd techsphere_3d_portfolio && npm run build",
+    "test": "cd techsphere_3d_portfolio && npm test",
+    "install-deps": "cd techsphere_3d_portfolio && npm install"
+  },
+  "workspaces": [
+    "techsphere_3d_portfolio"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
