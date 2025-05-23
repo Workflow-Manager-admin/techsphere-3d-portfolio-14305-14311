@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { useTexture, Sphere } from '@react-three/drei';
+import { Sphere } from '@react-three/drei';
 import * as THREE from 'three';
 
 /**
