@@ -1,37 +1,77 @@
-# Lightweight React Template for KAVIA
+# TechSphere 3D Portfolio
 
-This project provides a minimal React template with a clean, modern UI and minimal dependencies.
+An immersive and interactive 3D portfolio website for an IT company that showcases technological expertise and innovative solutions using React and Three.js.
 
 ## Features
 
-- **Lightweight**: No heavy UI frameworks - uses only vanilla CSS and React
-- **Modern UI**: Clean, responsive design with KAVIA brand styling
-- **Fast**: Minimal dependencies for quick loading times
-- **Simple**: Easy to understand and modify
+- **Interactive 3D Environment**: Fully interactive 3D scene using Three.js and React Three Fiber
+- **Responsive Design**: Adapts to different screen sizes and devices
+- **Performance Optimized**: Automatic quality adjustment based on device capabilities
+- **Animated UI**: Smooth transitions and animations for a modern experience
+- **Interactive Tech Elements**: Interactive 3D elements representing different technology domains
+
+## Technologies Used
+
+- React 18
+- Three.js
+- React Three Fiber
+- React Three Drei
+- React Spring for animations
 
 ## Getting Started
 
-In the project directory, you can run:
+### Prerequisites
 
-### `npm start`
+- Node.js 14.x or higher
+- npm 6.x or higher
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation
 
-### `npm test`
+1. Clone the repository:
+```
+git clone <repository-url>
+cd techsphere-3d-portfolio
+```
 
-Launches the test runner in interactive watch mode.
+2. Install dependencies:
+```
+npm install
+```
 
-### `npm run build`
+3. Start the development server:
+```
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Open [http://localhost:3000](http://localhost:3000) to view the application in your browser.
+
+## Project Structure
+
+- `src/components/MainContainer.js`: Main container component that integrates all parts of the portfolio
+- `src/components/canvas/TechSphereCanvas.js`: Three.js canvas setup and scene configuration
+- `src/components/models/`: 3D models and elements
+  - `TechSphere.js`: Central tech sphere component
+  - `FloatingPlatform.js`: Platform beneath the tech sphere
+  - `TechItems.js`: Interactive tech items that orbit around the sphere
+- `src/utils/`: Utility functions
+  - `animations.js`: Animation helper functions
+  - `interactions.js`: User interaction helpers
+
+## Usage
+
+The TechSphere 3D portfolio is designed to showcase a tech company's expertise and projects. It includes:
+
+- A central 3D tech sphere representing the company's technological core
+- Orbiting tech items representing different technology domains (AI, Cloud, IoT, etc.)
+- Scroll-based camera animations that guide the user through different sections
+- Interactive elements that respond to user hover and click actions
+- Information sections for company overview, projects, and contact
 
 ## Customization
 
-### Colors
+### Modifying Colors
 
-The main brand colors are defined as CSS variables in `src/App.css`:
+The main colors are defined as CSS variables in `src/App.css`:
 
 ```css
 :root {
@@ -40,43 +80,38 @@ The main brand colors are defined as CSS variables in `src/App.css`:
   --text-color: #ffffff;
   --text-secondary: rgba(255, 255, 255, 0.7);
   --border-color: rgba(255, 255, 255, 0.1);
+  --gradient-dark: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+  --shadow-glow: 0 0 20px rgba(232, 122, 65, 0.3);
 }
 ```
 
-### Components
+### Adding Tech Items
 
-This template uses pure HTML/CSS components instead of a UI framework. You can find component styles in `src/App.css`. 
+To add or modify the tech items that orbit around the central sphere, edit the `techItems` array in `src/components/models/TechItems.js`:
 
-Common components include:
-- Buttons (`.btn`, `.btn-large`)
-- Container (`.container`)
-- Navigation (`.navbar`)
-- Typography (`.title`, `.subtitle`, `.description`)
+```jsx
+const techItems = [
+  { position: [radius, 0, 0], rotationSpeed: 0.5, icon: 'box', label: 'Cloud Computing' },
+  // Add more items here
+];
+```
 
-## Learn More
+## Building for Production
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To create a production-optimized build:
 
-### Code Splitting
+```
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The build artifacts will be stored in the `build/` directory.
 
-### Analyzing the Bundle Size
+## Performance Tips
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- The 3D scene automatically adjusts quality based on the device's capabilities
+- For better performance on mobile devices, fewer animations are used
+- The scene uses proper LOD (Level of Detail) for different viewing distances
 
-### Making a Progressive Web App
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT License](LICENSE)
