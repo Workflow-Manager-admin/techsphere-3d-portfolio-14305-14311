@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "react-app"
+  ],
+  "rules": {
+    "no-unused-vars": "warn",
+    "react/react-in-jsx-scope": "off",
+    "import/no-anonymous-default-export": "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
