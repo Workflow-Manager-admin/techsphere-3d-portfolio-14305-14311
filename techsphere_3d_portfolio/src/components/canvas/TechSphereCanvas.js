@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { OrbitControls, useGLTF, Environment, Float, PerspectiveCamera } from '@react-three/drei';
+import { OrbitControls, Environment, Float } from '@react-three/drei';
 import * as THREE from 'three';
 import TechSphere from '../models/TechSphere';
 import FloatingPlatform from '../models/FloatingPlatform';
