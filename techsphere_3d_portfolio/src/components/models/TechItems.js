@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
-import { Text, Box, Sphere, Torus, Icosahedron, Html } from '@react-three/drei';
-import * as THREE from 'three';
+import { Box, Sphere, Torus, Icosahedron, Html } from '@react-three/drei';
 import { useSpring, animated, config } from '@react-spring/three';
 
 // Tech item component with interactive hover effect
